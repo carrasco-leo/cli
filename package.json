@@ -1,0 +1,45 @@
+{
+	"name": "@carrasco-leo/cli",
+	"version": "0.1.0",
+	"description": "Reusable CLI tools for project generation, automation, and development workflows.",
+	"type": "module",
+	"license": "MIT",
+	"author": "Léo CARRASCO",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/carrasco-leo/cli.git"
+	},
+	"bugs": {
+		"url": "https://github.com/carrasco-leo/cli/issues"
+	},
+	"homepage": "https://github.com/carrasco-leo/cli#readme",
+	"engines": {
+		"node": ">=22.12.0"
+	},
+	"bin": {
+		"carrasco-leo": "./dist/bin/carrasco-leo.js"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+    "build": "tsc",
+    "clean": "tsc --build --clean",
+    "dev": "tsx src/bin/carrasco-leo.ts",
+    "start": "node dist/bin/carrasco-leo.js",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run build"
+	},
+	"carrasco-leo": {
+		"packageScope": "@carrasco-leo"
+	},
+	"dependencies": {
+		"commander": "^15.0.0",
+		"glob": "^13.0.6"
+	},
+	"devDependencies": {
+		"@types/node": "^24.0.0",
+		"tsx": "^4.23.15",
+		"typescript": "^7.0.2"
+	}
+}

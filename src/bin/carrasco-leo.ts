@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 //
 // carrasco-leo.ts — @carrasco-leo/cli
 // ~/src/bin

@@ -44,7 +44,7 @@ async function main(
 }
 
 function replaceApplicationTitle(name: string, dryRun: boolean): void {
-	const appRootPath = join(process.cwd(), 'projects', 'app-client', 'src', 'app');
+	const appRootPath = join(process.cwd(), 'projects', 'app-client', 'src');
 	const htmlIndex = join(appRootPath, 'index.html');
 	const pugIndex = join(appRootPath, 'index.pug');
 

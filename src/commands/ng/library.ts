@@ -77,8 +77,7 @@ function fixPackageName(name: string, options: NgLibraryCommandOptions): void {
 	const packageJson = JSON.parse(packageContent);
 
 	// update the package
-	// packageJson.name = packageName ?? name;
-	packageJson.name = generatePackageName
+	packageJson.name = generatePackageName(name, options);
 
 	const packageUpdated = JSON.stringify(packageJson, null, '\t');
 
